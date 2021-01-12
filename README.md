@@ -1,6 +1,6 @@
 # Identify-Dog-Breeds-P1
 
-AI Programming with Python Nanodegree Program.
+Course : AI Programming with Python Nanodegree Program.
 
 PROJECT Use a Pre-trained Image Classifier to Identify Dog Breeds.
 
