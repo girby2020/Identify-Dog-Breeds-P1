@@ -1,0 +1,124 @@
+Command Line Arguments:
+     dir = uploaded_images/ 
+    arch = vgg 
+ dogfile = dognames.txt
+
+Pet Image Label Dictionary has 9 key-value pairs.
+Below are 9 of them:
+ 1 key:       Husky_Siberian_01141.jpg  label:             husky siberian
+ 2 key:                Husky_01331.jpg  label:                      husky
+ 3 key:                devil_66666.jpg  label:                      devil
+ 4 key:               Beagle_01171.jpg  label:                     beagle
+ 5 key:                doberman_01.jpg  label:                   doberman
+ 6 key:                 lynx_20190.jpg  label:                       lynx
+ 7 key:                doberman_02.jpg  label:                   doberman
+ 8 key:                Husky_01142.jpg  label:                      husky
+ 9 key:                Husky_01141.jpg  label:                      husky
+
+     MATCH:
+
+               Husky_01331.jpg: 
+Real:                      husky   Classifier:                 siberian husky
+
+               doberman_01.jpg: 
+Real:                   doberman   Classifier:    doberman, doberman pinscher
+
+                lynx_20190.jpg: 
+Real:                       lynx   Classifier:                           lynx
+
+               doberman_02.jpg: 
+Real:                   doberman   Classifier:    doberman, doberman pinscher
+
+               Husky_01142.jpg: 
+Real:                      husky   Classifier:              eskimo dog, husky
+
+               Husky_01141.jpg: 
+Real:                      husky   Classifier:              eskimo dog, husky
+
+ NOT A MATCH:
+
+      Husky_Siberian_01141.jpg: 
+Real:             husky siberian   Classifier:              eskimo dog, husky
+
+               devil_66666.jpg: 
+Real:                      devil   Classifier:             christmas stocking
+
+              Beagle_01171.jpg: 
+Real:                     beagle   Classifier:  walker hound, walker foxhound
+
+# Total Images 9 # Matches: 6 # NOT Matches: 3
+new result dict :  {'Husky_Siberian_01141.jpg': ['husky siberian', 'eskimo dog, husky', 0, 0, 1], 'Husky_01331.jpg': ['husky', 'siberian husky', 1, 0, 1], 'devil_66666.jpg': ['devil', 'christmas stocking', 0, 0, 0], 'Beagle_01171.jpg': ['beagle', 'walker hound, walker foxhound', 0, 1, 1], 'doberman_01.jpg': ['doberman', 'doberman, doberman pinscher', 1, 0, 1], 'lynx_20190.jpg': ['lynx', 'lynx', 1, 0, 0], 'doberman_02.jpg': ['doberman', 'doberman, doberman pinscher', 1, 0, 1], 'Husky_01142.jpg': ['husky', 'eskimo dog, husky', 1, 0, 1], 'Husky_01141.jpg': ['husky', 'eskimo dog, husky', 1, 0, 1]}
+
+     MATCH:
+
+               Husky_01331.jpg: 
+Real:                      husky   Classifier:                 siberian husky  
+PetLabelDog: 0  ClassLabelDog: 1
+
+               doberman_01.jpg: 
+Real:                   doberman   Classifier:    doberman, doberman pinscher  
+PetLabelDog: 0  ClassLabelDog: 1
+
+                lynx_20190.jpg: 
+Real:                       lynx   Classifier:                           lynx  
+PetLabelDog: 0  ClassLabelDog: 0
+
+               doberman_02.jpg: 
+Real:                   doberman   Classifier:    doberman, doberman pinscher  
+PetLabelDog: 0  ClassLabelDog: 1
+
+               Husky_01142.jpg: 
+Real:                      husky   Classifier:              eskimo dog, husky  
+PetLabelDog: 0  ClassLabelDog: 1
+
+               Husky_01141.jpg: 
+Real:                      husky   Classifier:              eskimo dog, husky  
+PetLabelDog: 0  ClassLabelDog: 1
+
+ NOT A MATCH:
+
+      Husky_Siberian_01141.jpg: 
+Real:             husky siberian   Classifier:              eskimo dog, husky  
+PetLabelDog: 0  ClassLabelDog: 1
+
+               devil_66666.jpg: 
+Real:                      devil   Classifier:             christmas stocking  
+PetLabelDog: 0  ClassLabelDog: 0
+
+              Beagle_01171.jpg: 
+Real:                     beagle   Classifier:  walker hound, walker foxhound  
+PetLabelDog: 1  ClassLabelDog: 1
+
+# Total Images 9 # Matches: 6 # NOT Matches: 3
+
+ ** Statistics from calculates_results_stats() function:
+N Images:  9  N Dog Images:  1  N NotDog Images:  8 
+Pct Corr dog: 100.0 Pct Corr NOTdog:  25.0  Pct Corr Breed:   0.0
+
+ ** Check Statistics - calculated from this function as a check:
+N Images:  9  N Dog Images:  1  N NotDog Images:  8 
+Pct Corr dog: 100.0 Pct Corr NOTdog:  25.0  Pct Corr Breed:   0.0
+
+
+*** Results Summary for CNN Model Architecture VGG ***
+N Images            :   9
+N Dog Images        :   1
+N Not-Dog Images    :   8
+ 
+The percentage of pct_match is 66.66666666666666
+The percentage of pct_correct_dogs is 100.0
+The percentage of pct_correct_breed is 0.0
+The percentage of pct_correct_notdogs is 25.0
+
+INCORRECT Dog/NOT Dog Assignments:
+Real:             husky siberian   Classifier:              eskimo dog, husky
+Real:                      husky   Classifier:                 siberian husky
+Real:                   doberman   Classifier:    doberman, doberman pinscher
+Real:                   doberman   Classifier:    doberman, doberman pinscher
+Real:                      husky   Classifier:              eskimo dog, husky
+Real:                      husky   Classifier:              eskimo dog, husky
+
+INCORRECT Dog Breed Assignment:
+Real:                     beagle   Classifier:  walker hound, walker foxhound
+
+** Total Elapsed Runtime: 0:0:7

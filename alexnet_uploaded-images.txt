@@ -1,0 +1,124 @@
+Command Line Arguments:
+     dir = uploaded_images/ 
+    arch = alexnet 
+ dogfile = dognames.txt
+
+Pet Image Label Dictionary has 9 key-value pairs.
+Below are 9 of them:
+ 1 key:                Husky_01331.jpg  label:                      husky
+ 2 key:              Dalmatian_040.jpg  label:                  dalmatian
+ 3 key:         eskimo_dog_husky_1.jpg  label:           eskimo dog husky
+ 4 key:               eskimo_01141.jpg  label:                     eskimo
+ 5 key:               Beagle_01171.jpg  label:                     beagle
+ 6 key:                doberman_02.jpg  label:                   doberman
+ 7 key:                husky_01142.jpg  label:                      husky
+ 8 key:                  bmw_01331.jpg  label:                        bmw
+ 9 key:             siberian_01141.jpg  label:                   siberian
+
+     MATCH:
+
+               Husky_01331.jpg: 
+Real:                      husky   Classifier:                 siberian husky
+
+             Dalmatian_040.jpg: 
+Real:                  dalmatian   Classifier: dalmatian, coach dog, carriage dog
+
+ NOT A MATCH:
+
+        eskimo_dog_husky_1.jpg: 
+Real:           eskimo dog husky   Classifier:              eskimo dog, husky
+
+              eskimo_01141.jpg: 
+Real:                     eskimo   Classifier: german shepherd, german shepherd dog, german police dog, alsatian
+
+              Beagle_01171.jpg: 
+Real:                     beagle   Classifier:  walker hound, walker foxhound
+
+               doberman_02.jpg: 
+Real:                   doberman   Classifier:        black-and-tan coonhound
+
+               husky_01142.jpg: 
+Real:                      husky   Classifier:                     pomeranian
+
+                 bmw_01331.jpg: 
+Real:                        bmw   Classifier:          sports car, sport car
+
+            siberian_01141.jpg: 
+Real:                   siberian   Classifier: german shepherd, german shepherd dog, german police dog, alsatian
+
+# Total Images 9 # Matches: 2 # NOT Matches: 7
+new result dict :  {'Husky_01331.jpg': ['husky', 'siberian husky', 1, 0, 1], 'Dalmatian_040.jpg': ['dalmatian', 'dalmatian, coach dog, carriage dog', 1, 1, 1], 'eskimo_dog_husky_1.jpg': ['eskimo dog husky', 'eskimo dog, husky', 0, 0, 1], 'eskimo_01141.jpg': ['eskimo', 'german shepherd, german shepherd dog, german police dog, alsatian', 0, 0, 1], 'Beagle_01171.jpg': ['beagle', 'walker hound, walker foxhound', 0, 1, 1], 'doberman_02.jpg': ['doberman', 'black-and-tan coonhound', 0, 0, 1], 'husky_01142.jpg': ['husky', 'pomeranian', 0, 0, 1], 'bmw_01331.jpg': ['bmw', 'sports car, sport car', 0, 0, 0], 'siberian_01141.jpg': ['siberian', 'german shepherd, german shepherd dog, german police dog, alsatian', 0, 0, 1]}
+
+     MATCH:
+
+               Husky_01331.jpg: 
+Real:                      husky   Classifier:                 siberian husky  
+PetLabelDog: 0  ClassLabelDog: 1
+
+             Dalmatian_040.jpg: 
+Real:                  dalmatian   Classifier: dalmatian, coach dog, carriage dog  
+PetLabelDog: 1  ClassLabelDog: 1
+
+ NOT A MATCH:
+
+        eskimo_dog_husky_1.jpg: 
+Real:           eskimo dog husky   Classifier:              eskimo dog, husky  
+PetLabelDog: 0  ClassLabelDog: 1
+
+              eskimo_01141.jpg: 
+Real:                     eskimo   Classifier: german shepherd, german shepherd dog, german police dog, alsatian  
+PetLabelDog: 0  ClassLabelDog: 1
+
+              Beagle_01171.jpg: 
+Real:                     beagle   Classifier:  walker hound, walker foxhound  
+PetLabelDog: 1  ClassLabelDog: 1
+
+               doberman_02.jpg: 
+Real:                   doberman   Classifier:        black-and-tan coonhound  
+PetLabelDog: 0  ClassLabelDog: 1
+
+               husky_01142.jpg: 
+Real:                      husky   Classifier:                     pomeranian  
+PetLabelDog: 0  ClassLabelDog: 1
+
+                 bmw_01331.jpg: 
+Real:                        bmw   Classifier:          sports car, sport car  
+PetLabelDog: 0  ClassLabelDog: 0
+
+            siberian_01141.jpg: 
+Real:                   siberian   Classifier: german shepherd, german shepherd dog, german police dog, alsatian  
+PetLabelDog: 0  ClassLabelDog: 1
+
+# Total Images 9 # Matches: 2 # NOT Matches: 7
+
+ ** Statistics from calculates_results_stats() function:
+N Images:  9  N Dog Images:  2  N NotDog Images:  7 
+Pct Corr dog: 100.0 Pct Corr NOTdog:  14.3  Pct Corr Breed:  50.0
+
+ ** Check Statistics - calculated from this function as a check:
+N Images:  9  N Dog Images:  2  N NotDog Images:  7 
+Pct Corr dog: 100.0 Pct Corr NOTdog:  14.3  Pct Corr Breed:  50.0
+
+
+*** Results Summary for CNN Model Architecture ALEXNET ***
+N Images            :   9
+N Dog Images        :   2
+N Not-Dog Images    :   7
+ 
+The percentage of pct_match is 22.22222222222222
+The percentage of pct_correct_dogs is 100.0
+The percentage of pct_correct_breed is 50.0
+The percentage of pct_correct_notdogs is 14.285714285714285
+
+INCORRECT Dog/NOT Dog Assignments:
+Real:                      husky   Classifier:                 siberian husky
+Real:           eskimo dog husky   Classifier:              eskimo dog, husky
+Real:                     eskimo   Classifier: german shepherd, german shepherd dog, german police dog, alsatian
+Real:                   doberman   Classifier:        black-and-tan coonhound
+Real:                      husky   Classifier:                     pomeranian
+Real:                   siberian   Classifier: german shepherd, german shepherd dog, german police dog, alsatian
+
+INCORRECT Dog Breed Assignment:
+Real:                     beagle   Classifier:  walker hound, walker foxhound
+
+** Total Elapsed Runtime: 0:0:0
